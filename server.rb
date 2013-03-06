@@ -7,9 +7,8 @@ while (session = server.accept)
    time=Time.new
    puts request
    headers = ["HTTP/1.1 200 OK",
-             "Server: Ruby",
+             "Server: Miracle",
              "Content-Type: text/html; charset=iso-8859-1",
-             #{}"Content-Length: #{response.length}",
              "Date: "+ time.inspect+"\r\n\r\n"].join("\r\n")
    session.puts headers
    trimmedrequest = request.gsub(/GET\ \//, '').gsub(/\ HTTP.*/, '')
